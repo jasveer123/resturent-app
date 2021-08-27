@@ -1,0 +1,43 @@
+<!--hero section-->
+
+<section class="hero">
+    <div class="container" id="section_div">
+        <div id="first_div">
+            <h6 id="italic_font"><em>Are you hungary</em></h6>
+            <h1 id="main_text">Dont't wait !!</h1>
+            <button id="order-btn">order now</button>
+
+        </div>
+        <div id="secound_div">
+            <img src="/img/hero.png" width="900px" alt="hero">
+        </div>
+    </div>
+</section>
+
+<!--menu section-->
+<section class="bestseller">
+    <div id="tit">
+        <h3>Resturent menu</h3>
+    </div>
+    <div class="grid-container">
+        {{#each food}}
+        <div class="card">
+            <img id="menu_img" src="/img/{{image}}" width="200px" height="133px" alt="card_img">
+            <div id="div1">
+                <h4 id="na">{{name}}</h4>
+                <span id="combo">{{size}}</span>
+                <div id="div2">
+                    <span id="price">₹ {{price}}</span>
+                    <button  data-pizza='pizza' class="button_card">
+                        <span id="pluse">+</span>
+                        <span id="add">ADD</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+       {{/each}}
+
+    </div>
+
+</section>
+

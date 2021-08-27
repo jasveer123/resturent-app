@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root{
+    --primary: #fe5f1e;
+    --primary_hover:#b23301;
+    --secodary:#f8f8f8;
+    --dark:#232323;
+    --grey:#ccc;
+    --pure:#fff;
+    --smooth:all 0.3s ease-in-out;
+
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -30px;
+    
+}
+
+#js{
+    background-color:var(--primary);
+}
+#left{
+    margin: 10px 30px;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing:antialiased;
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+.container li{
+    list-style: none;
+    margin: 3px 3px 3px;
+ 
+}
+.container a{
+     text-decoration: none;
+     color: black;
+     font-weight: bold;
+}
+
+
+#ul{
+     list-style: none;
+}
+.container li{
+    float: right;
+    padding: 1rem;
+}
+nav .container{
+    margin: 30px 30px;
+}
+#last{
+    height: 1.5rem;
+    background-color: var(--primary);
+    border-radius: 25px;
+}
+#last:hover{
+    background-color: var(--primary_hover);
+    
+}
+#logo{
+    padding: 1rem;
+}
+
+nav li a:hover{
+    color: var(--primary);
+    transition: var(--smooth);
+
+}
+
+
+/*section part*/
+
+#section_div{
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#first_div{
+    margin-top: 150px;
+    width: 50%;
+    margin-right: 70px;
+}
+#secound_div{
+    width: 80%;
+}
+
+#main_text{
+    font-weight: bolder;
+    font-size: -webkit-xxx-large;
+    margin-top: -20px;
+    margin-right: -150px;
+}
+#italic_font{
+      font-weight: bold;
+      font-size: large;
+      font-family: 'Sacramento';
+}
+.hero{
+    background-color: var(--secodary);
+}
+#menu_img{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+}
+#div1{
+    margin-top: -50px;
+    padding-bottom: 30px;
+}
+#combo{
+    margin-top: -50px;
+    background-color:var(--secodary);
+    margin-left: 60px;
+    border-radius: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 3px;
+}
+
+.button_card{
+    margin-left: 4rem;
+    border-color:var(--primary);
+    color:var(--primary);
+    border-radius: 15px;
+    transition: var(--smooth);
+}
+#div2{
+    margin-top: 20px;
+}
+#price{
+    margin-left: 10px;
+    font-weight: bold;
+}
+#tit{
+    font-family: 'Lobster';
+    font-size:x-large;
+    color: var(--primary);
+    margin-left: 45%;
+}
+
+ .button_card:hover{
+     background-color: var(--primary);
+     border-color: var(--pure);
+     color:var(--pure)
+ }
+ .grid-container{
+     width: 100rem;
+     margin-left: 12rem;
+     margin-right: -30px;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-template-rows:350px 350px;
+     grid-column-gap: 70px;
+
+ }
+
+ #na{
+
+    margin-left: 55px;
+ }
+
+
+
+  #order-btn{
+      background-color: var(--primary);
+      border-radius: 20px;
+      border-color: var(--primary);
+      color:var(--pure);
+      padding: 5px 10px 5px 10px;
+      margin-right: 40px;
+      transition: var(--smooth);
+  }
+
+  #order-btn:hover{
+        background-color: var(--primary_hover);
+  }
+
+  #seller{
+      font-family: 'Lobster';
+      color: var(--primary);
+      margin-left: 43%;
+      font-weight: bold;
+      font-size: x-large;
+  }
+
+  .bestseller{
+      background-color: var(--secodary);
+  }
+  .combos_title{
+      background-color: var(--secodary);
+  }
+
+  footer div{
+      color: black;
+      font-family: 'Sacramento';
+      background-color: rgb(233, 240, 217);
+      padding-left: 41%;
+
+  }
+  .foooter{
+    margin-top: auto;
+  }
+
+
+
+  /*cart*/
+
+  #img_cart{
+      padding-left: 35%;
+      margin-top: 40px;
+      background-color: var(--secodary);
+
+  }
+
+  #cart_text{
+      margin-left: 35%;
+
+  }
+
+  #oops{
+      margin-left:40px
+  }
+#back-btn{
+
+    color: white;
+    text-decoration:none;
+    font-size: 18px;
+    
+}
+#btn-back{
+    background-color: var(--primary);
+    border-radius: 20px;
+    border-color: var(--primary);
+    margin-left: 48rem;
+    margin-top: 7rem;
+    margin-bottom: 40px;
+    
+}
+
+/*full cart*/
+
+#black-cart{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3rem;
+    border-bottom: 5px solid rgb(233, 226, 226);
+    width: 600px;
+    margin-left: 35%;
+    margin-top: 2.5rem;
+
+}
+
+#item-list{
+
+    display: flex;
+    justify-content: space-around;
+    width: 700px;
+
+
+}
+
+#list-details{
+    padding-right: 50px;
+    padding-top: 30px;
+
+
+}
+#pc{
+    padding-right: 30px;
+    padding-top : 50px;
+}
+
+#rup{
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.list{
+ 
+    width: 38%;
+    margin-left: 600px;
+}
+#final{
+    display: flex;
+    padding-left: 1060px;
+    padding-top: 20px;
+    width: auto;
+
+}
+#total{
+    margin-top: -10px;
+    padding-right: -900px;
+}
+#price{
+    margin-top: -10px;
+    color: var(--primary);
+}
+#addd{
+   padding-left: 1100px;
+}
+#sub{
+    margin-left: 1197px;
+    color:white;
+    background-color: var(--primary);
+    border-radius: 15px;
+    border-color: var(--primary);
+    font-size:medium;
+}
+#sub:hover{
+    background-color: var(--primary_hover);
+    transition: var(--smooth);
+
+}
+
+#address{
+    height: 18px;
+
+
+}
+#phone{
+    height: 18px;
+
+}
+
+/*login*/
+
+
+.login-container{
+    padding-left: 820px;
+    padding-top: 50px;
+   
+  
+}
+.login-content{
+    font-family: 'Lato';
+}
+#forget{
+    text-decoration: none;
+    color: black;
+}
+#subb{
+    color: white;
+    background-color: var(--primary);
+    border-radius: 12px;
+    border-color: var(--primary);
+    font-size:15px;
+    margin-left: 10px;
+}
+
+#wel{
+    padding-left: 27px;
+    color: var(--primary);
+}
+
+
+
+
+/*carasule*/
