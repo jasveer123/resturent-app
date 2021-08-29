@@ -1,26 +1,28 @@
 
 const authcontroller = require("../app/http/controller/authcontroller")
 const homecontroller = require("../app/http/controller/homecontroller")
+const cartcontroller = require("../app/http/controller/cartcontroller")
 
 
-function initroutes(app){
+function initroutes(app) {
 
-  app.get("/",homecontroller().index)
+  app.get("/", homecontroller().home)
 
-app.get("/cart",(req,res)=>{
-  res.render("error_cart")
-})
-
-app.get("/login",authcontroller().login)
-
-app.get("/Register",authcontroller().register)
+  app.get("/cart", cartcontroller().fill)
 
 
-app.get("/Menu",(req,res)=>{
-  res.render("Menu")
-})
+  app.post("/updatecart", cartcontroller().update)
+
+  app.get("/login", authcontroller().login)
+
+  app.get("/Register", authcontroller().register)
+
+
+  app.get("/Menu", (req, res) => {
+    res.render("Menu")
+  })
 
 }
 
 
-module.exports=initroutes;
+module.exports = initroutes;
