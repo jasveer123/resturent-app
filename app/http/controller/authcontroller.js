@@ -1,15 +1,14 @@
-const { registerHelper } = require("hbs")
 
 function authcontroller(){
 
     return{
         login(req,res){
-            res.render("login")
+            res.render("auth/login")
             
         },
         
         register(req,res){
-            res.render("Register")
+            res.render("auth/register")
         }
 
     }
