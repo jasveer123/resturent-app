@@ -17,29 +17,10 @@ const MongoStore = require('connect-mongo');
 app.use(express.static('public'))
 //hbs.registerPartials(partials_path);
 app.use(flash())
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
 
 const url = 'mongodb://localhost:27017/food';
-
-/*const mongoose = require("mongoose");
-
-mongoose.connect(url,{
-    //userCreateIndex:true,
-    useNewUrlParser: true,
-    useUnifiedTopology : true,
-    useFindAndModify:false,
-    useCreateIndex:false
-}).then(()=>{
-    console.log("connection sucessful..");
-
-}).catch(e=>{
-      console.log("error in database")
-})*/
-
-
-/*let mongostore = new MongoStore({
-    uri: new MongoStore({ mongooseConnection: mongoose.connection  }),
-    collection:'mySessions'
-})*/
 
 
 let store = new MongoStore({
@@ -52,14 +33,19 @@ app.use(
     secret:process.env.COOKIE_SECRET,
     resave: false,
     saveUninitialized:false,
-    cookie:{maxAge:1000 * 14},
+    cookie:{maxAge:1000 *15},
     store: store
 }))
 app.use(expressLayouts)
 app.set('view engine', 'ejs')
 app.set("views",path.join(__dirname,"/resources/views"))
-
+app.use((req,res,next)=>{
+    res.locals.session=req.session
+    next();
+})
 require("./routes/web")(app)
+
+
 
 app.listen(port,()=>{
     console.log(`this is running on the port ${port}`)

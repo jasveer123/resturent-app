@@ -28,7 +28,9 @@
             <div id="left">
                 <ul>
 
-                    <li id="last"><a href="/cart"><img src="/img/cart.png" alt=""></a></li>
+                    <li id="last"><a href="/cart">
+                        <span id="countermsg"><%=session.cart ? session.cart.totalqty : "" %></span>
+                        <img id="cartlogopng" src="/img/cart.png" alt=""></a></li>
                     <li><a href="/myorders">My Orders</a></li>
                     <li><a href="/login">Login</a></li>
                     <li><a href="/Register">Register</a></li>
@@ -42,7 +44,8 @@
     </header>
 
     <%- body %>
-        <script  src="/javascript/app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="module"  src="/javascript/axios.js" ></script>
         <footer class="foooter">
             <div>
                 <h4><em> Made by love Jasveeer singh</em> </h4>
