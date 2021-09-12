@@ -57,9 +57,12 @@ nav .container{
     margin: 30px 30px;
 }
 #last{
-    height: 1.5rem;
+    height: 1px;
+    width: 2.5rem;
     background-color: var(--primary);
     border-radius: 25px;
+    display: flex;
+    padding-bottom: 30px;
 }
 #last:hover{
     background-color: var(--primary_hover);
@@ -236,16 +239,24 @@ nav li a:hover{
     color: white;
     text-decoration:none;
     font-size: 18px;
+    width: 30px;
     
 }
 #btn-back{
     background-color: var(--primary);
     border-radius: 20px;
     border-color: var(--primary);
-    margin-left: 48rem;
+    margin-left: 50rem;
     margin-top: 7rem;
     margin-bottom: 40px;
+    width: 7rem;
     
+}
+
+#countermsg{
+    color: white;
+    padding-top: 20px;
+
 }
 
 /*full cart*/
@@ -293,7 +304,7 @@ nav li a:hover{
 }
 #final{
     display: flex;
-    padding-left: 1060px;
+    margin-left:450px;
     padding-top: 20px;
     width: auto;
 
@@ -307,10 +318,10 @@ nav li a:hover{
     color: var(--primary);
 }
 #addd{
-   padding-left: 1100px;
+   padding-left: 500px;
 }
 #sub{
-    margin-left: 1197px;
+    margin-left: 500px;
     color:white;
     background-color: var(--primary);
     border-radius: 15px;
@@ -363,6 +374,10 @@ nav li a:hover{
     color: var(--primary);
 }
 
+#field{
+    color: red;
+    font-weight: bold;
+}
 
 
 

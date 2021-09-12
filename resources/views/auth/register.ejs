@@ -2,23 +2,24 @@
 	<div class="login-container">
 		
 		<div class="login-content">
-			<form action="index.html">
+			<form action="/register" method="POST">
 				<img src="img/avatar.svg" width="150px">
 				<h2 id="wel" class="title">Welcome</h2>
+				<%if(messages.error){%>
+				<span id="field"><%=messages.error%></span>
+				<%}%>
            		<div class="input-div one">
            		   <div class="div">
-           		   		<h4>First name</h4>
-           		   		<input type="text" class="input" id="user">
-						<h4>Last name</h4>
-           		   		<input type="text" class="input" id="user">	  
+           		   		<h4>name</h4>
+           		   		<input name="name" value="<%=messages.name%>"  type="text" class="input" id="users">
+						<h4>email</h4>
+           		   		<input name="email" value="<%=messages.email%>" type="text"   class="input" id="users">	  
            		   </div>
            		</div>
            		<div class="input-div pass">
            		   <div class="div">
            		    	<h4>New Password</h4>
-           		    	<input type="password" class="input" id="pass">
-						<h4>Confirm password</h4>
-           		    	<input type="password" class="input" id="pass">  
+           		    	<input name="password"   type="password" class="input" id="pass"> 
             	   </div>
             	</div>
 				<br>

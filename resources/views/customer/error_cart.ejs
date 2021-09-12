@@ -1,4 +1,5 @@
 <section width=100px>
+    <% if(session.cart) {%>
     <section>
     <div class="cart-container">
         <div id="black-cart">
@@ -10,60 +11,32 @@
 
 
 <section class="list">
+    <div>
+        <% for(let food of Object.values(session.cart.items)){%>
     <div id="item-list">
         
         <div>
-            <img  width ="150"src="/img/card_img.png" alt="pizza-list">
+            <img  width ="150"src="/img/<%=food.item.image%>" alt="pizza-list">
 
         </div>
         <div  id="list-details">
-            <h4 id="mac">mac burger with fries</h4>
-            <span id="cc">combo</span>
+            <h4 id="mac"><%= food.item.name%></h4>
+            <span id="cc"><%=food.item.size%></span>
         </div>
         <span id="pc">
-            1pc
+        <%=food.qty%>
         </span>
-        <span id="rup">₹300</span>
+        <span id="rup"><%=food.item.price*food.qty%></span>
 
     </div>
-     <div id="item-list">
-        
-        <div>
-            <img  width ="150"src="/img/card_img.png" alt="pizza-list">
-
-        </div>
-        <div  id="list-details">
-            <h4 id="mac">mac burger with fries</h4>
-            <span id="cc">combo</span>
-        </div>
-        <span id="pc">
-            1pc
-        </span>
-        <span id="rup">₹300</span>
-
-    </div>
-     <div id="item-list">
-        
-        <div>
-            <img  width ="150"src="/img/card_img.png" alt="pizza-list">
-
-        </div>
-        <div  id="list-details">
-            <h4 id="mac">mac burger with fries</h4>
-            <span id="cc">combo</span>
-        </div>
-        <span id="pc">
-            1pc
-        </span>
-        <span id="rup">₹300</span>
-
-    </div>
-</section>
+    <%}%>
+</div>
+     
 
 
 <div id="final">
     <h2 id="total">Total Amount :</h1>
-    <h2 id="price">₹900</h1>
+    <h2 id="price">₹<%=session.cart.totalprice%></h1>
 </div>
 <div id="addd">
     <form>
@@ -80,8 +53,11 @@
 </section>
 
 
+</section>
+<%}else{%>
 
-<!--<div id="cart_text">
+
+<div id="cart_text">
     <h1 id="oops"> Oops The Cart is Empty !! 😕</h1>
     <div class="pick">
          <h4> you dont pick any item please add some items from the menu to proceed </h4>
@@ -92,7 +68,11 @@
     <img width="500"src="/img/img_cart.png">
 </div>
 
-<button id="btn-back"><a id="back-btn" href="#">GO Back</a></button>-->
+<button id="btn-back"><a id="back-btn" href="#">GO Back</a></button>
+
+<%}%>
+
+
 
 
 

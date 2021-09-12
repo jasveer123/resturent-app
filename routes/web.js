@@ -3,7 +3,6 @@ const authcontroller = require("../app/http/controller/authcontroller")
 const homecontroller = require("../app/http/controller/homecontroller")
 const cartcontroller = require("../app/http/controller/cartcontroller")
 
-
 function initroutes(app) {
 
   app.get("/", homecontroller().home)
@@ -16,6 +15,8 @@ function initroutes(app) {
   app.get("/login", authcontroller().login)
 
   app.get("/Register", authcontroller().register)
+
+  app.post("/Register",authcontroller().details)
 
 
   app.get("/Menu", (req, res) => {
