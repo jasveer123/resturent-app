@@ -54,6 +54,7 @@ function authcontroller() {
 
 
         console.log(req.body)
+        
 
         }
 
