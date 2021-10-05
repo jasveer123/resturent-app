@@ -18,5 +18,9 @@
 ![Screenshot from 2021-08-27 23-00-59](https://user-images.githubusercontent.com/51202726/131167250-2025107b-5b64-4de7-a296-164290fbdd20.png)
 
 
+to run project 
+- npm install
+- nodemon server.js
+
 
 
