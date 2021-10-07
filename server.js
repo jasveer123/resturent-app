@@ -20,7 +20,7 @@ app.use(flash())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 
-const url = 'mongodb://localhost:27017/food';
+const url = process.env.MONGO_URL,;
 
 
 let store = new MongoStore({
